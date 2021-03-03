@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/ebab11eeb6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">  
+        <header>
+            <h1 id="main-title">Rock Paper Scissors</h1>
+        </header> 
+        <main> <!--  main content -->
+            <section class="first-section">  <!------  contains scoreboard     ------>
+                <div class="scoreboard">
+                    <div class="labels user-label">User</div>
+                    <div class="labels comp-label">Comp</div>
+                    <span id="user-score">0</span> : <span class="comp-score">0</span>
+                </div><!------ end of scoreboard    ------>
+
+                <div class="result-section"> <!------  results  ------>
+                    <p id="result-message">Choose your weapon!</p>
+                </div>
+            </section>
+
+            <section class="selection-section">
+                <div class="selection-container">
+                    <button class="selection rock"> <!------  rock ------>
+                        <i class="fas fa-fist-raised selection-pick"></i>
+                    </button>
+                    <button class="selection paper"><!------  paper ------>
+                        <i class="fas fa-hand-paper selection-pick"></i>
+                    </button>
+                    <button class="selection scissors"> <!------  scissors ------>
+                        <i class="fas fa-hand-scissors selection-pick"></i>
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div> 
+<script src="./script.js"></script>
+</body>
+</html>
