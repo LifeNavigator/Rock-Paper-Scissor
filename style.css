@@ -27,7 +27,6 @@ header {
 .container {
     max-width: 55%;
     margin: 5rem auto;
-    border: 1px solid green;
 }
 
 
@@ -85,7 +84,7 @@ header {
     background: white;
     color: #222;
     padding: 2px 10px;
-    transition: all .2s linear;
+    transition: all .2s ease-in-out;
 }
 
 
@@ -140,6 +139,7 @@ header {
     max-width: 100%;
     font-size: 20rem;
     border: solid 1px white;
+    border-radius: 5px;
     padding: 10px;
     display: flex;
     flex-flow: row wrap;
@@ -176,8 +176,29 @@ header {
 
 }
 
+.new-round {
+    width: 100%;
+    font-family: inherit;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    background: none;
+    border: none;
+    padding: 4em 5em;
+    transition: all .2s ease;
+    cursor: pointer;
+}
 
+.new-round:hover,
+.new-round:focus {
+    color: #222;
+    transform: scale(1.1);
+    background-color: #e2584d;
+}
 
+.hidden {
+    display: none !important;
+}
 
 /*----- animation section to add when click event -----*/
 .wave {

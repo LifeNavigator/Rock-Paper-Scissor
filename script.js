@@ -12,14 +12,13 @@ let currentScore = 0;
 
 //buttons
 const btnAll = document.querySelectorAll('.selection')
-const btnRock = document.querySelector('.btnRock');
-const btnPaper = document.querySelector('.btnPaper');
-const btnScissors = document.querySelector('.btnScissors');
 const icons = document.querySelectorAll('.selection-pick')
+const newRound = document.querySelector('.new-round');
 
 //other
 let computerSelection;
 let selection = ['rock', 'paper', 'scissor'];
+let round = 1;
 let roundWin1 = true;
 let roundWin2 = false;
 let draw = true;
@@ -44,9 +43,6 @@ function liveScore() {
         userLabel.classList.remove('label-winner');
         console.log('its working');
     }
-}
-
-if (score[0] >= 10 || score[1] >= 10) {
 
 }
 
@@ -85,13 +81,22 @@ function playRound(user) {
             roundWin1 = false;
             liveScore();
             break;
-
-            // default:
-            //     console.warn("No value was entered");
-            //     console.log(typeof (user));
-            //     console.log(typeof (computerSelection));
-            //     break;
     }
+
+
+    if (score[0] >= 5 || score[1] >= 5) {
+        // btnAll.classList.toggle('hidden');
+        newRound.classList.remove('hidden');
+
+        for (let i = 0; i < btnAll.length; i++) {
+            btnAll[i].classList.add('hidden');
+        }
+
+        score[0] = 0;
+        score[1] = 0;
+
+    }
+
 }
 
 for (let i = 0; i < btnAll.length; i++) {
@@ -99,14 +104,23 @@ for (let i = 0; i < btnAll.length; i++) {
         randomGen();
         playRound(selection[i]);
 
-        if (btnAll[i].classList.contains('wave')) {
+        btnAll[i].classList.add('wave');
+
+        setTimeout(function () {
             btnAll[i].classList.remove('wave')
-        } else {
-            btnAll[i].classList.add('wave');
-        }
+        }, 4000);
 
     });
 }
+
+newRound.addEventListener('click', function () {
+    userScore.textContent = 0;
+    compScore.textContent = 0;
+    for (let i = 0; i < btnAll.length; i++) {
+        btnAll[i].classList.remove('hidden');
+    }
+})
+
 
 // function reset() {
 
