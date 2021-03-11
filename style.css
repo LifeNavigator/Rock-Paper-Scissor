@@ -194,6 +194,7 @@ header {
     color: #222;
     transform: scale(1.1);
     background-color: #e2584d;
+    border-radius: 5px;
 }
 
 .hidden {

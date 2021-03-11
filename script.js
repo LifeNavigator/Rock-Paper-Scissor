@@ -87,13 +87,11 @@ function playRound(user) {
     if (score[0] >= 5 || score[1] >= 5) {
         // btnAll.classList.toggle('hidden');
         newRound.classList.remove('hidden');
+        message.textContent = "Start new round!"
 
         for (let i = 0; i < btnAll.length; i++) {
             btnAll[i].classList.add('hidden');
         }
-
-        score[0] = 0;
-        score[1] = 0;
 
     }
 
@@ -116,9 +114,14 @@ for (let i = 0; i < btnAll.length; i++) {
 newRound.addEventListener('click', function () {
     userScore.textContent = 0;
     compScore.textContent = 0;
+
     for (let i = 0; i < btnAll.length; i++) {
         btnAll[i].classList.remove('hidden');
     }
+
+    newRound.classList.add('hidden');
+    message.textContent = "choose your weapon!"
+
 })
 
 
