@@ -147,7 +147,7 @@ header {
 }
 
 .selection {
-    margin: 0;
+    margin: 0 auto;
     transition: all 0.3s linear;
     width: 30%;
     background: transparent;
@@ -298,11 +298,13 @@ header {
     }
 
     .selection-container {
-        flex-flow: row nowrap;
+        flex-flow: column wrap;
+        justify-content: center;
     }
 
     .selection-pick {
-        font-size: 5rem;
+        font-size: 4rem;
+        padding: 1em;
     }
 
 
