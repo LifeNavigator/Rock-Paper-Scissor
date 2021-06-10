@@ -177,7 +177,7 @@ header {
 }
 
 .new-round {
-    width: 100%;
+    max-width: 100%;
     font-family: inherit;
     font-size: 2rem;
     text-transform: uppercase;
@@ -187,14 +187,13 @@ header {
     padding: 4em 5em;
     transition: all .2s ease;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .new-round:hover,
 .new-round:focus {
     color: #222;
-    transform: scale(1.1);
     background-color: #e2584d;
-    border-radius: 5px;
 }
 
 .hidden {
