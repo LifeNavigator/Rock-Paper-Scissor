@@ -7,7 +7,7 @@ A simple game of rock paper scissors.
 ![Screenshot](./images/project-screenshot.png)
 
 
-- Live Site URL: [Netlify lik](https://thirsty-lewin-7e328b.netlify.app)
+- Live Site URL: [Netlify lik](https://competent-beaver-a44bcf.netlify.app)
 ### Built with
 
 - Semantic HTML5 markup
